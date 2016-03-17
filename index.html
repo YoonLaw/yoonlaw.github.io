@@ -67,25 +67,64 @@
         </em>
       </p>
 
-      <p>
-        Please fill in your name and email below to begin the signing process.
-      </p>
+      <h3>
+        Please fill in the information below and submit to begin the signing process.
+      </h3>
 
-      <form style="width: 400px; margin-left: auto; margin-right: auto; margin-top: 48px;" method="get"
+      <form class="form-horizontal"
+            style="width: 500px; margin-left: auto; margin-right: auto; margin-top: 48px;" method="get"
             action="https://na2.docusign.net/Member/PowerFormSigning.aspx">
         <input type="hidden" name="PowerFormId" value="e14765d0-228a-4e56-972a-a2685338295c" />
         <div class="form-group">
-          <label for="full-name">Full Name</label>
-          <input type="text" name="ClassMember_UserName" class="form-control" id="full-name" placeholder="Full Name" />
+          <label for="full-name" class="control-label col-sm-4">Full Name</label>
+          <div class="col-sm-8">
+            <input type="text" name="ClassMember_UserName" class="form-control" id="full-name" placeholder="Full Name" />
+          </div>
         </div>
         <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" name="ClassMember_Email" class="form-control" id="email" placeholder="Email" />
+          <label for="email" class="control-label col-sm-4">Email Address</label>
+          <div class="col-sm-8">
+            <input type="email" name="ClassMember_Email" class="form-control" id="email" placeholder="Email" />
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Submit and Sign</button>
+        <div class="form-group">
+          <label for="address" class="control-label col-sm-4">Home Address</label>
+          <div class="col-sm-8">
+            <input type="text" name="Address" class="form-control" id="address" placeholder="Address, City, State ZIP" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="phone-number" class="control-label col-sm-4">Phone Number</label>
+          <div class="col-sm-2">
+            <input type="text" name="AreaCode" maxlength="3" class="form-control" id="phone-number" placeholder="Area" />
+          </div>
+          <div class="col-sm-6">
+            <input type="text" name="PhoneNumber" maxlength="8" class="form-control" placeholder="Number" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ssn" class="control-label col-sm-4">Last Four of SSN</label>
+          <div class="col-sm-8">
+            <input type="password" name="SSN" class="form-control" id="ssn" maxlength="4" placeholder="Last Four SSN#" />
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-8">
+            <button type="submit" class="btn btn-primary">Submit and Sign</button>
+          </div>
+        </div>
+
       </form>
 
       <footer class="site-footer">
+        <div class="pull-left">
+          Ph: 213-612-0988 | Fax: 213-947-1211
+        </div>
+        <div class="pull-right">
+          <a href="mailto:kyoon@yoonlaw.com">kyoon@yoonlaw.com</a> |
+          <a href="http://www.yoonlaw.com" target="_blank">www.yoonlaw.com</a>
+        </div>
       </footer>
 
     </section>
