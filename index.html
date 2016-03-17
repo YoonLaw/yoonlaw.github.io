@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Yoonlaw Authorization Form by YoonLaw</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap-theme.css" media="screen">
+    <!--<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
@@ -64,6 +66,24 @@
           advice from an attorney. Any description of previous results does not guarantee a similar outcome.
         </em>
       </p>
+
+      <p>
+        Please fill in your name and email below to begin the signing process.
+      </p>
+
+      <form style="width: 400px; margin-left: auto; margin-right: auto; margin-top: 48px;" method="get"
+            action="https://na2.docusign.net/Member/PowerFormSigning.aspx">
+        <input type="hidden" name="PowerFormId" value="e14765d0-228a-4e56-972a-a2685338295c" />
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" name="ClassMember_UserName" class="form-control" id="full-name" placeholder="Full Name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" name="ClassMember_Email" class="form-control" id="email" placeholder="Email" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit and Sign</button>
+      </form>
 
       <footer class="site-footer">
       </footer>
