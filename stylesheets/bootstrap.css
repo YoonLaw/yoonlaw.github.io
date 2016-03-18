@@ -1508,7 +1508,6 @@ select[multiple].input-lg {
 .help-block {
   display: block;
   margin-top: 5px;
-  margin-bottom: 10px;
   color: #737373;
 }
 @media (min-width: 768px) {
@@ -3884,4 +3883,18 @@ button.list-group-item-danger.active:focus {
 }
 .affix {
   position: fixed;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.help-block {
+  font-size: 12px;
 }

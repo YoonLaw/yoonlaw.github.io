@@ -10,6 +10,8 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.1/validator.min.js"></script>
   </head>
   <body>
     <section class="page-header">
@@ -71,41 +73,46 @@
         Please fill in the information below and submit to begin the signing process.
       </h3>
 
-      <form class="form-horizontal"
+      <form class="form-horizontal" data-toggle="validator"
             style="width: 500px; margin-left: auto; margin-right: auto; margin-top: 48px;" method="get"
             action="https://na2.docusign.net/Member/PowerFormSigning.aspx">
         <input type="hidden" name="PowerFormId" value="e14765d0-228a-4e56-972a-a2685338295c" />
-        <div class="form-group">
+        <div class="form-group has-feedback">
           <label for="full-name" class="control-label col-sm-4">Full Name</label>
           <div class="col-sm-8">
-            <input type="text" name="ClassMember_UserName" class="form-control" id="full-name" placeholder="Full Name" />
+            <input type="text" name="ClassMember_UserName" required="required" class="form-control" id="full-name"
+                   placeholder="Full Name" data-error="Please enter your full name" />
+            <div class="help-block with-errors"></div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group has-feedback">
           <label for="email" class="control-label col-sm-4">Email Address</label>
           <div class="col-sm-8">
-            <input type="email" name="ClassMember_Email" class="form-control" id="email" placeholder="Email" />
+            <input type="email" name="ClassMember_Email" required="required" class="form-control" id="email"
+                   placeholder="Email" data-error="Email address is invalid" />
+            <div class="help-block with-errors"></div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group has-feedback">
           <label for="address" class="control-label col-sm-4">Home Address</label>
           <div class="col-sm-8">
-            <input type="text" name="Address" class="form-control" id="address" placeholder="Address, City, State ZIP" />
+            <input type="text" name="Address" class="form-control" data-error="Home address is required" required="required" id="address" placeholder="Address, City, State ZIP" />
+            <div class="help-block with-errors"></div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group has-feedback">
           <label for="phone-number" class="control-label col-sm-4">Phone Number</label>
-          <div class="col-sm-2">
-            <input type="text" name="AreaCode" maxlength="3" class="form-control" id="phone-number" placeholder="Area" />
-          </div>
-          <div class="col-sm-6">
-            <input type="text" name="PhoneNumber" maxlength="8" class="form-control" placeholder="Number" />
+          <div class="col-sm-8">
+            (<input style="padding-right: 0; width: 25%; display: inline-block;" type="text" data-error="Phone Number invalid" name="AreaCode" pattern="[0-9]{3}" required="required" title="Area Code should be a three digit number" maxlength="3" class="form-control" id="phone-number" placeholder="NNN" />)
+            <input style="float: right; width: 65%;" type="text" name="PhoneNumber" data-error="Phone Number invalid" maxlength="8" class="form-control" placeholder="NNN-NNNN" pattern="[0-9]{3}-?[0-9]{4}" required="required" title="Phone Number should be in the format XXX-XXXX or XXXXXXX" />
+            <div class="help-block with-errors">Area code: NNN, Number: NNN-NNNN</div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group with-feedback">
           <label for="ssn" class="control-label col-sm-4">Last Four of SSN</label>
           <div class="col-sm-8">
-            <input type="password" name="SSN" class="form-control" id="ssn" maxlength="4" placeholder="Last Four SSN#" />
+            <input type="password" name="SSN" class="form-control" required="required" id="ssn" maxlength="4" placeholder="Last Four SSN#" pattern="\d{4}" data-error="SSN should be a four-digit number" title="SSN should be a four digit number" />
+            <div class="help-block with-errors"></div>
           </div>
         </div>
         <div class="form-group">
